@@ -40,7 +40,7 @@ const MovieList = () => {
           aria-label="add"
           style={{
             position: 'absolute',
-            top: '10px',
+            top: '80px',
             right: '10px'
           }}
           onClick={() => undefined}

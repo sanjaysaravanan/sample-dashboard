@@ -10,6 +10,7 @@ import './App.css';
 import MovieList from './MovieList/MovieList';
 import AddMovie from './MovieList/AddMovie';
 import Movie from './MovieList/Movie';
+import PrimarySearchAppBar from './Layout';
 
 const customTheme = createTheme({
   palette: {
@@ -48,8 +49,8 @@ function App() {
       <ThemeProvider theme={customTheme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MovieList />} />
-            <Route path="/movies" >
+            {/* <Route path="/" element={<MovieList />} /> */}
+            <Route path="/movies" element={<PrimarySearchAppBar />}  >
               <Route index element={<MovieList />} />
               {/* Path Params Child should come alogn with /<parent-paths> */}
               <Route path="/movies/:movieId" element={<Movie />} />
