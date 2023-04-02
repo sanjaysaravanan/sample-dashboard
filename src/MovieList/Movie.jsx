@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import EditIcon from '@mui/icons-material/Edit';
 import { Button, Typography } from '@mui/material';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 
 
 const Movie = () => {
@@ -19,6 +19,9 @@ const Movie = () => {
 
   const { movieId } = useParams(); // will always be string
 
+  // url search/query params
+  const [searchParams] = useSearchParams();
+  console.log('URL QUERIES', searchParams.get('name'), searchParams.get('score'));
   useEffect(() => {
     if (data.id !== movieId)
       fetch('https://63f9bdce897af748dcc2d723.mockapi.io/movies/' + movieId)
