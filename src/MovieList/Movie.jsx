@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import EditIcon from '@mui/icons-material/Edit';
-import { Button, Typography } from '@mui/material';
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { Typography } from '@mui/material';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 
 const Movie = () => {
